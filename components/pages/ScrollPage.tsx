@@ -74,10 +74,16 @@ export default function ScrollPage() {
           ref={slider}
           className={cn(styles.slider, "sm:text-[240px] text-[120px]")}
         >
-          <motion.p style={{ color: textColor }} ref={firstText}>
+          <motion.p
+            className={cn("font-sans", { color: textColor })}
+            ref={firstText}
+          >
             Fullstack Developer -
           </motion.p>
-          <motion.p style={{ color: textColor }} ref={secondText}>
+          <motion.p
+            className={cn("font-sans", { color: textColor })}
+            ref={secondText}
+          >
             Fullstack Developer -
           </motion.p>
         </div>
