@@ -9,16 +9,19 @@ const projects = [
     title: "Task Manager",
     source: "/project-1.png",
     color: "#8C8C8C",
+    link: "https://github.com/ASWINKMANOJ/Task-Manager",
   },
   {
     title: "Pick Me Some",
     source: "/project-2.png",
     color: "#EFE8D3",
+    link: "https://pick-me-some-dev.netlify.app/",
   },
   {
     title: "Travel Glide",
     source: "/project-3.webp",
     color: "#706D63",
+    link: "https://github.com/ASWINKMANOJ/Travel_Glide",
   },
 ];
 
@@ -34,6 +37,7 @@ export default function ProjectPage() {
               index={index}
               title={project.title}
               setModal={setModal}
+              link={project.link}
             />
           );
         })}

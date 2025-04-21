@@ -27,7 +27,7 @@ export default function ImageScrollPage() {
           {Images.map((i) => (
             <motion.div
               key={i}
-              className="relative h-[80vh] w-[60vh] flex-shrink-0 rounded-xl overflow-hidden shadow-lg"
+              className="relative h-[60vh] w-[50vh]  sm:h-[80vh] sm:w-[60vh] flex-shrink-0 rounded-xl overflow-hidden shadow-lg"
               whileHover={{ y: -20, scale: 1.08 }}
             >
               <Image

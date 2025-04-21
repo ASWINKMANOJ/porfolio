@@ -3,7 +3,6 @@ import { motion } from "motion/react";
 import { Button } from "./ui/button";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 
-// Typewriter component remains the same
 const TypewriterText = ({
   text,
   delay = 0,
@@ -32,7 +31,15 @@ const TypewriterText = ({
   );
 };
 
-export default function Main() {
+export default function Main({
+  projectPageRef,
+}: {
+  projectPageRef: React.RefObject<HTMLDivElement | null>;
+}) {
+  const handleScrollToProjects = () => {
+    projectPageRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <div className="w-full h-full px-6 py-16 lg:px-16 relative overflow-hidden font-sans">
       {/* Rest of your content remains the same */}
@@ -80,7 +87,10 @@ export default function Main() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="flex flex-wrap gap-6 items-center"
         >
-          <Button className="py-6 px-8 rounded-full cursor-pointer">
+          <Button
+            className="py-6 px-8 rounded-full cursor-pointer"
+            onClick={handleScrollToProjects}
+          >
             View Projects
           </Button>
 
