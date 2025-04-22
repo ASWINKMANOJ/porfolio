@@ -1,13 +1,15 @@
 .project {
   display: flex;
   width: 100%;
-  padding: 100px 0px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   align-items: center;
   justify-content: space-between;
   border-top: 1px solid rgba(201, 201, 201, 1);
   font-family: "Playfair Display";
   cursor: pointer;
   transition: all 0.2s linear;
+  flex-wrap: wrap;
 }
 
 .project:hover {
@@ -21,4 +23,15 @@
 .project:hover p {
   transform: translateX(-10px);
   transition: all 0.2s linear;
+}
+
+@media (width < 40rem /* 640px */) {
+  .project:hover h1 {
+    transform: translateX(10px);
+    transition: all 0.2s linear;
+  }
+  .project:hover p {
+    transform: translateX(10px);
+    transition: all 0.2s linear;
+  }
 }

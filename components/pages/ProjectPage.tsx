@@ -3,6 +3,7 @@ import { useState } from "react";
 import styles from "./ProjectPage.module.css";
 import Project from "@/components/Project";
 import Modal from "../Modal";
+import { cn } from "@/lib/utils";
 
 const projects = [
   {
@@ -28,7 +29,7 @@ const projects = [
 export default function ProjectPage() {
   const [modal, setModal] = useState({ active: false, index: 0 });
   return (
-    <main className={styles.main}>
+    <main className={cn(styles.main, "dark:bg-black")}>
       <div className={styles.body}>
         {projects.map((project, index) => {
           return (

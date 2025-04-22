@@ -22,8 +22,10 @@ export default function Project({
       onMouseEnter={() => setModal({ active: true, index })}
       onMouseLeave={() => setModal({ active: false, index })}
     >
-      <h1 className="text-5xl">{title}</h1>
-      <p className="text-xl font-extralight">Design and Development</p>
+      <h1 className=" text-3xl sm:text-5xl">{title}</h1>
+      <p className="text-xl sm:text-xl font-extralight">
+        Design and Development
+      </p>
     </a>
   );
 }

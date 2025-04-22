@@ -2,11 +2,13 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
 import Image from "next/image";
+import { useTheme } from "next-themes";
 
 const Images = [1, 2, 3, 4, 5, 6];
 
 export default function ImageScrollPage() {
   const scrollRef = useRef<HTMLDivElement>(null);
+  const { resolvedTheme } = useTheme();
 
   const { scrollYProgress } = useScroll({
     target: scrollRef,
@@ -14,7 +16,11 @@ export default function ImageScrollPage() {
   });
 
   const x = useTransform(scrollYProgress, [0, 1], ["0%", "-100%"]);
-  const backGround = useTransform(scrollYProgress, [0.6, 1], ["#000", "#fff"]);
+  const backGround = useTransform(
+    scrollYProgress,
+    [0.6, 1],
+    ["#000", resolvedTheme === "dark" ? "#000" : "#fff"]
+  );
 
   return (
     <motion.div
@@ -35,6 +41,7 @@ export default function ImageScrollPage() {
                 fill
                 alt={`img-${i}`}
                 className="object-cover"
+                loading="lazy"
               />
             </motion.div>
           ))}

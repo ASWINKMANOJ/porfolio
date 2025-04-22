@@ -1,14 +1,22 @@
 "use client";
 import { useEffect, useRef } from "react";
 import HomePage from "@/components/pages/HomePage";
-import ScrollPage from "@/components/pages/ScrollPage";
-import ImagesPage from "@/components/pages/ImageScrollPage";
 import ProjectPage from "@/components/pages/ProjectPage";
 import Lenis from "lenis";
 import "lenis/dist/lenis.css";
+import dynamic from "next/dynamic";
 
 export default function Home() {
   const projectPageRef = useRef<HTMLDivElement>(null);
+  const ScrollPage = dynamic(() => import("../components/pages/ScrollPage"), {
+    ssr: false,
+  });
+  const ImagesPage = dynamic(
+    () => import("../components/pages/ImageScrollPage"),
+    {
+      ssr: false,
+    }
+  );
 
   useEffect(() => {
     // Initialize Lenis smooth scroll
