@@ -2,6 +2,7 @@
 import { motion } from "motion/react";
 import { Button } from "./ui/button";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
+import { useRouter } from "next/navigation";
 
 const TypewriterText = ({
   text,
@@ -39,6 +40,8 @@ export default function Main({
   const handleScrollToProjects = () => {
     projectPageRef.current?.scrollIntoView({ behavior: "smooth" });
   };
+
+  const router = useRouter();
 
   return (
     <div className="w-full min-h-full px-6 py-16 lg:px-16 relative overflow-hidden font-sans">
@@ -97,6 +100,7 @@ export default function Main({
           <Button
             variant="outline"
             className="py-6 px-8 rounded-full cursor-pointer"
+            onClick={() => router.push("/contact")}
           >
             Contact Me
           </Button>
