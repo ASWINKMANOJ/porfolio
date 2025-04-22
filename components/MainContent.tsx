@@ -41,7 +41,7 @@ export default function Main({
   };
 
   return (
-    <div className="w-full h-full px-6 py-16 lg:px-16 relative overflow-hidden font-sans">
+    <div className="w-full min-h-full px-6 py-16 lg:px-16 relative overflow-hidden font-sans">
       {/* Rest of your content remains the same */}
       <div className="relative z-10 max-w-6xl mx-auto">
         <motion.div
@@ -126,9 +126,9 @@ export default function Main({
           {[
             "React",
             "Next.js",
-            "Node.js",
+            "Flutter",
             "TypeScript",
-            "Tailwind CSS",
+            "React Native",
             "GraphQL",
           ].map((tech) => (
             <span

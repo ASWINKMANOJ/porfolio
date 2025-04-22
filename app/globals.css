@@ -114,6 +114,7 @@
 html {
   transition: background-color 0.5s cubic-bezier(0.25, 0.8, 0.25, 1),
     color 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  scrollbar-width: none;
 }
 
 @layer base {
@@ -123,4 +124,8 @@ html {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
