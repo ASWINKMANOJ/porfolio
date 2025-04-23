@@ -29,12 +29,16 @@ export default function ImageScrollPage() {
       className="h-[500vh] bg-black"
     >
       <div className="sticky top-0 h-screen flex items-center overflow-hidden">
-        <motion.div style={{ x }} className="flex gap-12 px-20">
+        <motion.div style={{ x }} className="flex gap-24 px-20">
           {Images.map((i) => (
             <motion.div
               key={i}
-              className="relative h-[60vh] w-[50vh]  sm:h-[80vh] sm:w-[60vh] flex-shrink-0 rounded-xl overflow-hidden shadow-lg"
-              whileHover={{ y: -20, scale: 1.08 }}
+              className="relative h-[60vh] w-[50vh] origin-top  sm:h-[80vh] sm:w-[60vh] flex-shrink-0 rounded-xl overflow-hidden shadow-lg"
+              whileHover={{
+                y: -20,
+                scale: 1.08,
+                transition: { duration: 0.3 },
+              }}
             >
               <Image
                 src={`/img-${i}.jpg`}

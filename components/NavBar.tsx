@@ -38,12 +38,16 @@ export default function NavBar() {
             <SheetTitle className="sr-only">Mobile Navigation</SheetTitle>
 
             <nav className="flex flex-col gap-6 px-8 pt-16 text-lg font-sans text-gray-800 dark:text-gray-200">
-              <Link href="/resume" className="hover:text-blue-600 transition">
+              <a
+                href="/resume.pdf"
+                download
+                className="hover:text-blue-600 transition"
+              >
                 resume
-              </Link>
-              <Link href="/contact" className="hover:text-blue-600 transition">
+              </a>
+              <a href="/contact" className="hover:text-blue-600 transition">
                 contact
-              </Link>
+              </a>
               <div className="pt-4">
                 <ThemeSwitch />
               </div>
