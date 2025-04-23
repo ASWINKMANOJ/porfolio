@@ -201,12 +201,12 @@ export default function Contact() {
         <motion.button
           variants={itemVariants}
           whileHover={{
-            scale: 1.05,
+            scale: 1.25,
             transition: { duration: 0.2 },
           }}
           whileTap={{ scale: 0.95 }}
           type="submit"
-          className="mt-6 sm:mt-8 w-12 h-12 sm:w-24 sm:h-24 bg-black dark:bg-white text-white dark:text-black font-sans text-base sm:text-lg rounded-full flex items-center justify-center transition-colors duration-200"
+          className="cursor-pointer mt-6 sm:mt-8 w-16 h-16 sm:w-24 sm:h-24 bg-black dark:bg-white text-white dark:text-black font-sans text-base sm:text-lg rounded-full flex items-center justify-center transition-colors duration-200"
         >
           Send
         </motion.button>

@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react";
 import HomePage from "@/components/pages/HomePage";
 import ProjectPage from "@/components/pages/ProjectPage";
+import FooterComponent from "@/components/Footer";
 import Lenis from "lenis";
 import "lenis/dist/lenis.css";
 import dynamic from "next/dynamic";
@@ -48,6 +49,7 @@ export default function Home() {
       <div ref={projectPageRef}>
         <ProjectPage />
       </div>
+      <FooterComponent />
     </>
   );
 }

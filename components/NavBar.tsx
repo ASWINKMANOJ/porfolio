@@ -18,7 +18,9 @@ export default function NavBar() {
 
       {/* Desktop navigation */}
       <nav className="hidden font-sans md:flex items-center gap-8 text-lg font-medium text-gray-700 dark:text-gray-200">
-        <Link href="/resume">resume</Link>
+        <a href="/resume.pdf" download>
+          resume
+        </a>
         <Link href="/contact">contact</Link>
         <ThemeSwitch />
       </nav>
