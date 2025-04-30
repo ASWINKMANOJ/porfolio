@@ -55,11 +55,14 @@ export default function ContactPage() {
           whileHover={hoverEffect}
           className="border-b border-gray-600 pb-4"
         >
-          <label className="block text-base sm:text-lg mb-2">Your Name</label>
+          <label className="block text-base sm:text-lg mb-2" htmlFor="name">
+            Your Name
+          </label>
           <input
             type="text"
             className="w-full bg-transparent outline-none text-lg sm:text-xl"
             placeholder="John Doe"
+            name="name"
           />
         </motion.div>
 
@@ -68,13 +71,14 @@ export default function ContactPage() {
           whileHover={hoverEffect}
           className="border-b border-gray-600 pb-4"
         >
-          <label className="block text-base sm:text-lg mb-2">
+          <label className="block text-base sm:text-lg mb-2" htmlFor="email">
             Email Address
           </label>
           <input
             type="email"
             className="w-full bg-transparent outline-none text-lg sm:text-xl"
             placeholder="hello@example.com"
+            name="email"
           />
         </motion.div>
 
@@ -83,10 +87,13 @@ export default function ContactPage() {
           whileHover={hoverEffect}
           className="border-b border-gray-600 pb-4"
         >
-          <label className="block text-base sm:text-lg mb-2">Message</label>
+          <label className="block text-base sm:text-lg mb-2" htmlFor="message">
+            Message
+          </label>
           <textarea
             className="w-full bg-transparent outline-none text-lg sm:text-xl resize-none min-h-[100px] sm:min-h-[120px]"
             placeholder="What would you like to discuss?"
+            name="message"
           />
         </motion.div>
 
