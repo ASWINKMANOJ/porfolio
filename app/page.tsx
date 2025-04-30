@@ -6,6 +6,8 @@ import FooterComponent from "@/components/Footer";
 import Lenis from "lenis";
 import "lenis/dist/lenis.css";
 import dynamic from "next/dynamic";
+import EducationPage from "@/components/pages/EducationPage";
+import ContactPage from "@/components/pages/ContactPage";
 
 export default function Home() {
   const projectPageRef = useRef<HTMLDivElement>(null);
@@ -46,9 +48,11 @@ export default function Home() {
       <HomePage projectPageRef={projectPageRef} />
       <ScrollPage />
       <ImagesPage />
+      <EducationPage />
       <div ref={projectPageRef}>
         <ProjectPage />
       </div>
+      <ContactPage />
       <FooterComponent />
     </>
   );
