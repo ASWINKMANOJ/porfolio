@@ -79,7 +79,7 @@ export default function Main({
           className="text-lg sm:text-xl md:text-2xl mb-10 max-w-2xl text-gray-700 dark:text-gray-300 leading-relaxed"
         >
           <TypewriterText
-            text="Hi, I'm Aswin. I build performant, accessible, and visually stunning web applications that users love."
+            text="Hi, I'm Aswin — I craft fast, accessible, and visually engaging web applications that leave a lasting impression."
             delay={0.04}
           />
         </motion.p>
